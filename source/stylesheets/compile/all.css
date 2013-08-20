@@ -1,0 +1,64 @@
+/*
+Syntax error: Invalid CSS after "...t{#e7e7e7, #fff": expected "{", was "};"
+        on line 24 of stylesheets/sass/all.scss
+
+19:   background: url("../images/middleman.png") no-repeat center 100px;
+20:   padding: 350px 0 10px;
+21:   margin: 0; }
+22: 
+23: .button{
+24:   @include linear-gradient{#e7e7e7, #fff};
+25:   @include box-shadow{0px 1px 4px rgba(0, 0, 0.3)};
+26:   @include border-radious(4px);
+27: }
+28: 
+29: .doc {
+
+Backtrace:
+stylesheets/sass/all.scss:24
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.10/lib/sass/scss/parser.rb:1145:in `expected'
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.10/lib/sass/scss/parser.rb:1083:in `expected'
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.10/lib/sass/scss/parser.rb:1078:in `tok!'
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.10/lib/sass/scss/parser.rb:533:in `block'
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.10/lib/sass/scss/parser.rb:528:in `ruleset'
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.10/lib/sass/scss/parser.rb:590:in `block in declaration_or_ruleset'
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.10/lib/sass/scss/parser.rb:1121:in `call'
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.10/lib/sass/scss/parser.rb:1121:in `rethrow'
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.10/lib/sass/scss/parser.rb:591:in `declaration_or_ruleset'
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.10/lib/sass/scss/parser.rb:553:in `block_child'
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.10/lib/sass/scss/parser.rb:542:in `block_contents'
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.10/lib/sass/scss/parser.rb:534:in `block'
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.10/lib/sass/scss/parser.rb:196:in `include_directive'
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.10/lib/sass/scss/parser.rb:174:in `special_directive'
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.10/lib/sass/scss/parser.rb:146:in `directive'
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.10/lib/sass/scss/parser.rb:553:in `block_child'
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.10/lib/sass/scss/parser.rb:542:in `block_contents'
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.10/lib/sass/scss/parser.rb:534:in `block'
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.10/lib/sass/scss/parser.rb:528:in `ruleset'
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.10/lib/sass/scss/parser.rb:552:in `block_child'
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.10/lib/sass/scss/parser.rb:545:in `block_contents'
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.10/lib/sass/scss/parser.rb:82:in `stylesheet'
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.10/lib/sass/scss/parser.rb:27:in `parse'
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.10/lib/sass/engine.rb:342:in `_to_tree'
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.10/lib/sass/engine.rb:315:in `_render'
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.10/lib/sass/engine.rb:262:in `render'
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.10/lib/sass/plugin/compiler.rb:362:in `update_stylesheet'
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.10/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.10/lib/sass/plugin/compiler.rb:201:in `each'
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.10/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.10/lib/sass/plugin/compiler.rb:235:in `watch'
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.10/lib/sass/plugin.rb:107:in `method_missing'
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.10/lib/sass/exec.rb:455:in `watch_or_update'
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.10/lib/sass/exec.rb:318:in `process_result'
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.10/lib/sass/exec.rb:41:in `parse'
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.10/lib/sass/exec.rb:21:in `parse!'
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.10/bin/sass:9:in `<top (required)>'
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/bin/sass:23:in `load'
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/bin/sass:23:in `<main>'
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/bin/ruby_noexec_wrapper:14:in `eval'
+/Users/carolannbonner/.rvm/gems/ruby-2.0.0-p247/bin/ruby_noexec_wrapper:14:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid CSS after \"...t{#e7e7e7, #fff\": expected \"{\", was \"};\"\A         on line 24 of stylesheets/sass/all.scss\A \A 19:   background: url(\"../images/middleman.png\") no-repeat center 100px;\A 20:   padding: 350px 0 10px;\A 21:   margin: 0; }\A 22: \A 23: .button{\A 24:   @include linear-gradient{#e7e7e7, #fff};\A 25:   @include box-shadow{0px 1px 4px rgba(0, 0, 0.3)};\A 26:   @include border-radious(4px);\A 27: }\A 28: \A 29: .doc {"; }
