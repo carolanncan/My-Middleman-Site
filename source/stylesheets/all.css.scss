@@ -1,18 +1,16 @@
-//@import "bourbon/bourbon";
-//@import "neat/neat";
-
-
 @charset "utf-8";
 
+@import "bourbon/bourbon";
+@import "neat/neat";
 
 @include font-face(SourceSansPro, '/fonts/SourceSansPro-Bold' bold);
 @include font-face(SourceSansPro, '/fonts/SourceSansPro-It', italic);
 @include font-face(SourceSansPro, '/fonts/SourceSansPro-Regular', normal);
 
 body {
-  background: #d4d4d4 url("../images/background.png");
+  background: #d4d4d4 url("../images/cream-pattern.png");
   text-align: center;
-  font-family: ('SourceSansPro');
+  font-family: ('SourceSansPro'), sans-serif;
 }
 
 h1 {
@@ -25,10 +23,12 @@ h1 {
   margin: 0; }
 
 .button{
-  height:50px;
-  width:35%;
+  width:15%;
   background-color:#000;
   color:#e7e7e7;
+  margin:auto;
+  padding:1%;
+  @include linear-gradient(#1e5799, #2989d8);
 }
 
 .doc {
