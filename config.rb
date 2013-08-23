@@ -11,6 +11,9 @@
 # Page options, layouts, aliases and proxies
 ###
 
+# Change the CSS directory
+#set :css_dir, "source/stylesheets/sass"
+
 # Per-page layout changes:
 #
 # With no layout

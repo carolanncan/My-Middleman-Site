@@ -1,70 +1,191 @@
 @charset "utf-8";
-
 @import "bourbon/bourbon";
+//$visual-grid: true;
 @import "neat/neat";
+@import "neat/neat-helpers";
 
-@include font-face(SourceSansPro, '/fonts/SourceSansPro-Bold' bold);
-@include font-face(SourceSansPro, '/fonts/SourceSansPro-It', italic);
-@include font-face(SourceSansPro, '/fonts/SourceSansPro-Regular', normal);
 
-body {
-  background: #d4d4d4 url("../images/cream-pattern.png");
-  text-align: center;
-  font-family: ('SourceSansPro'), sans-serif;
-}
+html{font-family:('Quattrocento Sans', sans-serif); margin:0;padding:0;}
+body {font-size:em(16);text-align: left;margin:0;padding:0;}
 
-h1 {
-  color: rgba(0, 0, 0, .9);
-  font-weight: normal;
-  letter-spacing: -1px;
-  text-transform: uppercase;
+//Variables
+
+$primary-a:#505655;
+$primary-b:#626a68;
+$primary-c:#737c7a;
+$secondary-a:#FF6400;
+$secondary-b:#C6692C;
+$secondary-c:#AF4500;
+$secondary-d:#FFB280;
+$neutral-light:#ececf0;
+$black:#000;
+$background:#fff;
+
+//Typography
+
+::selection{background:$secondary-d;}
+::-moz-selection{background:$black;}
+
+h1{
+  color:$primary-a;
+  font-variant:italic;
+  font-size:em(40);
+  font-weight:400;
+  letter-spacing: 4px;
+  text-align:center;
   text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
-  padding: 350px 0 10px;
-  margin: 0; }
-
-.button{
-  width:15%;
-  background-color:#000;
-  color:#e7e7e7;
-  margin:auto;
-  padding:1%;
-  @include linear-gradient(#1e5799, #2989d8);
+  text-transform: uppercase;
+  margin:0;
 }
 
-.doc {
-  font-size: 14px;
-  margin: 0; }
-  .doc:before,
-  .doc:after {
-    opacity: .2;
-    padding: 6px;
-    font-style: normal;
-    position: relative;
-    content: "•"; }
-  a {
-    color: rgba(0, 0, 0, 0.3); }
-    a:hover {
-      color: #666; }
+h2{
+  color:$secondary-b;
+  font-size:em(35);
+  font-weight:400;
+  line-height: 150%; 
+  margin:0;
+}
 
-.welcome {
-  -webkit-animation-name: welcome;
-  -webkit-animation-duration: .9s; }
+h3{
+  color:$primary-c;
+  font-size:em(25);
+  font-weight:400;
+  line-height: 200%; 
+  margin:0;
+    &:before, &:after{
+      content:"–";
+      color: $secondary-b;
+      margin: 0 1%;}
+}
 
-@-webkit-keyframes welcome {
-  from {
-    -webkit-transform: scale(0);
-    opacity: 0;
-  }
-  50% {
-   -webkit-transform: scale(0);
-   opacity: 0;
-  }
-  82.5% {
-    -webkit-transform: scale(1.03);
-    -webkit-animation-timing-function: ease-out;
-    opacity: 1;
-  }
-  to {
-    -webkit-transform: scale(1);
-  }
+h4{
+  color:$secondary-b;
+  font-style:italic;
+  font-weight:700;
+  font-size:em(30);
+  margin:0;
+}
+
+p{
+  color:$black;
+  font-size:em(20);
+  line-height: 160%;
+  margin:0;
+}
+
+a{
+  color:$secondary-b;
+  text-decoration: none;
+    &:hover {color: $primary-b;}
+}
+
+code{
+  background-color:$neutral-light;
+  font-family:$monospace;
+  font-size:em(13);
+}
+
+//Graphic Elements
+
+.tooltip{
+  display:inline;
+  position:relative;
+    &:hover:after{
+      background: $black;
+      background: rgba(0,0,0,.9);
+      border-radius: 5px;
+      bottom: -50px;
+      color: $secondary-d;
+      content: attr(title);
+      font-size:em(13);
+      left: 20%;
+      line-height: 120%;
+      @include pad(10px);
+      position: absolute;
+      z-index: 98;
+      width: 220px;
+    }
+}
+
+
+//Skeleton
+.container{
+  @include outer-container;
+}
+
+.single{
+  @include span-columns(12);
+  @include pad(default);
+  width:100%;}
+    .double{
+      @include span-columns(6);
+        h4{
+          font-size:em(23);}
+}
+
+header{
+  @include span-columns(12);
+  @include pad(default);
+  background:#fff;
+}
+
+nav{
+  text-align:center;
+    ul{
+      @include span-columns(12);
+      @include pad(0);
+        list-style:none;
+        display:inline;
+          li{display:inline-block;
+            @include pad(default default 0 default);
+              a{font-size:em(22);}}}
+}
+
+.feature{
+  @include pad(5%);
+  @include span-columns(12);
+  background-image: url('../images/geometry.png');
+    figcaption{@include pad(default 0 default 3%);}
+}
+
+figure{
+  figcaption{
+    @include pad(default);  
+    text-align: center;
+    color:$secondary-b;}
+}
+
+section{
+    aside {
+      @include span-columns(3);
+      @include pad(default);
+      border-top:1px solid $neutral-light;
+        img{
+              margin:8% 0;
+              float:left;}}}
+    article{
+      @include span-columns(9);
+      @include pad(default);
+      border-top:1px solid $neutral-light;
+        ul{
+          @include pad(15px 30px);
+          list-style:disc;
+          text-align: left;
+          margin-top:0;
+          color:$secondary-b;
+            li a{
+              color:$secondary-b;
+              line-height: 130%;}}
+        .list-title{
+          color:$primary-b;
+          font-weight: 700;
+          padding-bottom: 8px;
+          border-bottom:1px solid #fff;}        
+}
+
+.gradient-box{
+  @include pad(default default 0 default );
+  border-radius: 5px;  
+  background: $neutral-light;
+  margin-top:2%;
 }

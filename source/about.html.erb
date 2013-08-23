@@ -1,12 +1,94 @@
 ---
-title: Carolann Bonner
+title: The Process 
 ---
 
-<div class="welcome">
-  <h1>Carolann Bonner</h1>
+<link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400italic,700' rel='stylesheet' type='text/css'>
+
+  <header><h1>My First Middleman</h1>
+	<nav>
+  	<ul>
+    	<li><%= link_to "Home", "index.html" %></li>
+     	<li><%= link_to "The Process", "about.html" %></li>
+     	<li><%= link_to "Contact", "casestudy.html" %></li>
+  	</ul>
+  </nav>	
+ </header>
   
-  <p class="doc">
-    <%= link_to "Home", "index.html" %>
-     <%= link_to "About Me", "about.html" %>
-  </p><!-- .doc -->
-</div><!-- .welcome -->
+	<div class="container">	
+		<section>
+			<aside>
+				<h4>Middleman</h4>
+				<a href="http://middlemanapp.com"><img src="../images/mm.svg" height="100" width="auto"></a>
+			</aside>
+			<article>
+				<p>When I was looking over the list Dan provided, Middleman was actually where I wanted to start. I had previously completed the CodeAcademy tutorials and spent a few hours looking over Sass.</p>
+				<br><p>That being said, it may explain why this was the hardest part of the process for me. I spent about 2-3 hours working to get my files set up correctly and to understand some of the nuances. I still have a short list of things I'm unsure about, and list of a few really simple things I wish I had known going in.</p>
+				<br><p>It seems like the toughest problems to solve are the <em>really</em> simple problems. The things that are so basic and fudnamental that it's impossible to Google them.
+				
+				<div class="gradient-box">	
+					<p class="list-title">Helpful Links</p>
+					<ul>
+						<li><a href="http://12devs.co.uk/articles/204/">Building Static Websites with Middleman</a>
+						<li><a href="http://forum.middlemanapp.com/">Middleman Forum</a></li>
+					</div>
+			
+			</article>		
+		</section>
+			
+		<section>
+			<aside>
+				<h4>Bash</h4>
+				<a href="http://www.asciimation.co.nz/"><img src="../images/ascii.png" height="130" width="auto"></a>
+			</aside>
+			<article>
+				<p>I could probably count on my hand the amount of times I've used my command line - including watching ASCII Star Wars. So installing things from the command line, navigating through directories, remembering what directory I'm in before I install something... all took a little getting used to.</p>
+				
+				<div class="gradient-box">	
+					<p class="list-title">Helpful Links</p>
+					<ul>
+						<li><a href="https://help.ubuntu.com/community/Beginners/BashScripting">Ubuntu Bash Scripting Wiki</a>
+						<li><a href="http://www.gnu.org/software/bash/manual/bashref.html">Bash Reference Manual</a></li>
+						<li><a href="http://robots.thoughtbot.com/post/2641409235/a-tmux-crash-course" class="tooltip" title="Haven't used this yet but would like to learn.">TMUX Crash Course</a></li>
+					</div>
+			
+			</article>		
+		</section>
+
+		<section>
+			<aside>
+				<h4>Sass</h4>
+				<a href="http://www.sass-lang.com"><img src="../images/sass.png" height="150" width="auto"></a>
+			</aside>
+			<article>
+				<p>Sass was a lot of fun to learn! After building one site, from scratch, with only CSS, I had developed a context for why you would want or need some of the things SASS offers and how to apply those things.</p>
+				
+				<div class="gradient-box">	
+					<p class="list-title">Helpful Links</p>
+					<ul>
+						<li><a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html">Sass Reference</a>
+						<li><a href="http://railscasts.com/episodes/330-better-sass-with-bourbon">Rails Casts #268</a></li>
+					</div>
+			
+			</article>		
+		</section>
+
+		<section>
+			<aside>
+				<h4>Bourbon</h4>
+				<a href="http://bourbon.io"><img src="../images/bourbon.png" height="35" width="auto"></a>
+				<a href="http://neat.bourbon.io"><img src="../images/neat.svg" height="65" width="auto"></a>
+			</aside>
+			<article>
+				<p>There are some elements that I can see being more useful for a team of people building sites together, or building really large sites. For my practice building, it has been a little bit of a stretch to understand the full benefit of some of these mixins. But the more I play around with it, the more I really like using it.</p>
+				
+				<div class="gradient-box">	
+					<p class="list-title">Helpful Links</p>
+					<ul>
+						<li><a href="http://robots.thoughtbot.com/post/30928446434/introducing-bourbon-neat-a-sass-based-responsive-grid">Introducing Bourbon Neat -Reda Lemeden</a>
+						<li><a href="http://railscasts.com/episodes/330-better-sass-with-bourbon">Rails Casts #330</a></li>
+					</div>
+			
+			</article>		
+		</section>
+
+</div><!-- .content -->

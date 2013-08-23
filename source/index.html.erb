@@ -1,14 +1,38 @@
 ---
-title: Carolann Bonner
+title: Home
 ---
 
-<div class="welcome">
-  <h1>My Middleman Site</h1>
-  
-  <p class="doc">
-    <%= link_to "Home", "index.html" %>
-     <%= link_to "About Me", "about.html" %>
+<link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400italic,700' rel='stylesheet' type='text/css'>
 
-     <div class="button">My button</div>
-  </p><!-- .doc -->
+  <header><h1>My First Middleman</h1>
+	<nav>
+  	<ul>
+    	<li><%= link_to "Home", "index.html" %></li>
+     	<li><%= link_to "The Process", "about.html" %></li>
+     	<li><%= link_to "Contact", "casestudy.html" %></li>
+  	</ul>
+  </nav>	
+ </header>
+
+	<div class="feature">
+	<figure>
+	<img src="../images/robot.svg" height="300" width="100%" alt="Robot says Hey Thoughtbot!">
+	<figcaption>Hey, Thoughtbot!</figcaption>
+	</figure>
+	</div>
+
+<div class="container">
+<div class="single">
+	<div class="double">
+	<img src="../images/teambonner.jpg" height="468" width="400">
+	</div>
+		<div class="double">
+		<h2>Start with Quantity over Quality</h2>
+			<p>I read an article, <a href="http://www.fastcompany.com/3015027/leadership-now/want-to-conquer-a-new-skill-do-it-every-day">Want To Conquer A New Skill? Do It Every Day</a>. The essence of the article submits that to learn a new skill, a beginner should focus on quantity over quality. Practice often and you will learn to refine your skill as you go. Do it everyday, and build on your knowledge.</p>
+			<p>That approach worked really well for me in this process.
+
+			<br>Coding and programming, in my opinion, requires a nonlinear learning proccess. You have to throw yourself into a sea of suicidal confusion, stick it out, and wait for the moment when things start to click. I spent several days consuming information, hoping it would make sense later. Luckily, most of it has made sense. But you have to let go, let yourself be confused for as long as it takes. and just keep working at it.</p>
+	</div>
+	</div><!--main-->
+</div><!--.container-->
 </div><!-- .welcome -->
