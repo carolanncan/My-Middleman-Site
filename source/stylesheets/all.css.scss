@@ -3,23 +3,11 @@
 //$visual-grid: true;
 @import "neat/neat";
 @import "neat/neat-helpers";
-
+@import "sass/mobile";
+@import"sass/variables";
 
 html{font-family:('Quattrocento Sans', sans-serif); margin:0;padding:0;}
-body {font-size:em(16);text-align: left;margin:0;padding:0;}
-
-//Variables
-
-$primary-a:#505655;
-$primary-b:#626a68;
-$primary-c:#737c7a;
-$secondary-a:#FF6400;
-$secondary-b:#C6692C;
-$secondary-c:#AF4500;
-$secondary-d:#FFB280;
-$neutral-light:#ececf0;
-$black:#000;
-$background:#fff;
+body {font-size:em(16);font-weight:400;text-align: left;margin:0;padding:0;}
 
 //Typography
 
@@ -42,7 +30,7 @@ h2{
   color:$secondary-b;
   font-size:em(35);
   font-weight:400;
-  line-height: 150%; 
+  line-height: 120%; 
   margin:0;
 }
 
@@ -85,7 +73,20 @@ code{
   font-size:em(13);
 }
 
+a.symbol:before {
+    content: attr(title);
+    margin-right: 0.3em;
+    font-size: 130%;
+}
+
 //Graphic Elements
+
+.gray-box{
+  @include pad(default default 0 default );
+  border-radius: 5px;  
+  background: $neutral-light;
+  margin-top:2%;
+}
 
 .tooltip{
   display:inline;
@@ -107,27 +108,27 @@ code{
     }
 }
 
-
-//Skeleton
+//Structure
 .container{
   @include outer-container;
 }
 
-.single{
+.single-wrap{
   @include span-columns(12);
   @include pad(default);
-  width:100%;}
-    .double{
-      @include span-columns(6);
-        h4{
-          font-size:em(23);}
+  border-top:1px solid $neutral-light;
+    &:nth-of-type(1){border:none;}
+}
+
+.column{
+  @include span-columns(6);
+  @include pad(default);
+  @include media($mobile){@include span-columns (4 of 4);}
 }
 
 header{
   @include span-columns(12);
-  @include pad(default);
-  background:#fff;
-}
+  @include pad(default 0 0 0);}
 
 nav{
   text-align:center;
@@ -135,34 +136,41 @@ nav{
       @include span-columns(12);
       @include pad(0);
         list-style:none;
-        display:inline;
-          li{display:inline-block;
-            @include pad(default default 0 default);
-              a{font-size:em(22);}}}
+          li{
+            @include inline-block;
+            @include pad(0 default 0 default);
+              a{
+                font-size:em(16);
+                text-transform: uppercase;}}}
+}
+
+figure{
+  figcaption{
+    @include pad(default);
+    font-style:italic;  
+    text-align: center;
+    color:$primary-c;}
 }
 
 .feature{
   @include pad(5%);
   @include span-columns(12);
   background-image: url('../images/geometry.png');
-    figcaption{@include pad(default 0 default 3%);}
-}
-
-figure{
-  figcaption{
-    @include pad(default);  
-    text-align: center;
-    color:$secondary-b;}
+    img{
+      display:block;
+      margin:0 auto;}
+    figcaption{
+      @include pad(default 0 default 3%);}
 }
 
 section{
-    aside {
-      @include span-columns(3);
-      @include pad(default);
-      border-top:1px solid $neutral-light;
-        img{
-              margin:8% 0;
-              float:left;}}}
+  aside {
+    @include span-columns(3);
+    @include pad(default);
+    border-top:1px solid $neutral-light;
+      img{
+        margin:8% 0;
+        float:left;}}}
     article{
       @include span-columns(9);
       @include pad(default);
@@ -183,9 +191,74 @@ section{
           border-bottom:1px solid #fff;}        
 }
 
-.gradient-box{
-  @include pad(default default 0 default );
-  border-radius: 5px;  
-  background: $neutral-light;
-  margin-top:2%;
+footer{
+  @include media($mobile){
+    @include span-columns(4 of 4);}
+  @include span-columns(12);
+  @include pad(default);
+  background-color:$neutral-light;
+  margin-top:3%;
+    .col{
+      @include media($mobile){@include span-columns (4 of 4);}
+      @include span-columns(4);}
+    h2{
+      color:$secondary-b;
+      font-size:em(18);
+      text-transform: uppercase;
+      margin-bottom: 3%;}
+    p{
+      font-size:em(17);
+      color:$primary-a;}
+}
+
+//Sprites
+.sprite-socialmedia{
+  background-image:url(../images/socialmedia.png);
+  display:inline-block;
+  margin:0 2% 2% 0; 
+  text-indent:-9999px;
+  height:44px;
+  width:44px;
+}
+.email{
+  background-position:0 -44px;
+    &:hover{background-position:0 0;}
+}
+.github{
+  background-position:132px -44px;;
+    &:hover{background-position:132px 0;}
+}
+.twitter{
+  background-position:-88px -44px;
+    &:hover{background-position:88px 0;}
+}
+.dribbble{
+  background-position:-132px -44px;
+    &:hover{background-position:44px 0;}
+}
+
+//Form
+
+form{
+  input[type="text"],input[type="email"],input[type="tel"],input[type="url"],
+    textarea, input {
+      @include fill-parent;
+      @include box-shadow(inset 0 0 3px 1px rgba(0, 0, 0, 0.04));
+      @include pad(15px);
+      background:#FFF;
+      border:1px solid $neutral-light;
+      border-radius:5px;
+      color:$primary-c;
+      margin:0 0 10px;
+        &:focus{
+          border:1px solid $black;
+          outline:none;}}
+    label{
+      color:$primary-b;
+      font-size:em(18);
+      line-height: 170%;
+    }
+
+    button{
+      @include button (simple, $secondary-b);}  
 }

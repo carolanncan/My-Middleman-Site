@@ -1,0 +1,29 @@
+@import"sass/variables";
+$visual-grid: true;
+@import "neat/neat";
+@import "neat/neat-helpers";
+
+
+@include media($mobile){
+
+body{
+	font-size:em(14);}
+
+nav{
+  text-align:center;
+    ul{
+      @include span-columns(4 of 4);
+        list-style:none;
+          li{
+            @include inline-block;
+            @include pad(0 default 0 default);
+              a{
+                font-size:em(16);
+                text-transform: uppercase;}}}
+}
+
+footer{
+	@include span-columns(4 of 4);
+	background-color:green;
+}
+}

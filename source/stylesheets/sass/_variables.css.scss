@@ -1,0 +1,20 @@
+//Variables
+
+//breakpoints
+$mobile: new-breakpoint(max-width 500px 4);
+$tablet: new-breakpoint(max-width 800px 4);
+$desktop: new-breakpoint(min-width 800px 12);
+
+//colors
+$primary-a:#505655;
+$primary-b:#626a68;
+$primary-c:#737c7a;
+
+$secondary-a:#FF6400;
+$secondary-b:#C6692C;
+$secondary-c:#AF4500;
+$secondary-d:#FFB280;
+
+$neutral-light:#ececf0;
+$black:#000;
+$background:#fff;

@@ -12,7 +12,6 @@
 ###
 
 # Change the CSS directory
-#set :css_dir, "source/stylesheets/sass"
 
 # Per-page layout changes:
 #

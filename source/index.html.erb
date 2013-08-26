@@ -2,37 +2,34 @@
 title: Home
 ---
 
-<link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400italic,700' rel='stylesheet' type='text/css'>
-
-  <header><h1>My First Middleman</h1>
-	<nav>
-  	<ul>
-    	<li><%= link_to "Home", "index.html" %></li>
-     	<li><%= link_to "The Process", "about.html" %></li>
-     	<li><%= link_to "Contact", "casestudy.html" %></li>
-  	</ul>
-  </nav>	
- </header>
-
 	<div class="feature">
 	<figure>
-	<img src="../images/robot.svg" height="300" width="100%" alt="Robot says Hey Thoughtbot!">
+	<img class="animate" src="../images/robot.svg" height="20%" width="20%" alt="Robot says Hey Thoughtbot!">
 	<figcaption>Hey, Thoughtbot!</figcaption>
 	</figure>
-	</div>
+	</div><!--feature-->
 
 <div class="container">
-<div class="single">
-	<div class="double">
-	<img src="../images/teambonner.jpg" height="468" width="400">
-	</div>
-		<div class="double">
-		<h2>Start with Quantity over Quality</h2>
-			<p>I read an article, <a href="http://www.fastcompany.com/3015027/leadership-now/want-to-conquer-a-new-skill-do-it-every-day">Want To Conquer A New Skill? Do It Every Day</a>. The essence of the article submits that to learn a new skill, a beginner should focus on quantity over quality. Practice often and you will learn to refine your skill as you go. Do it everyday, and build on your knowledge.</p>
-			<p>That approach worked really well for me in this process.
+	<div class="single-wrap">
+		<div class="column">
+		<h2>Beginners Should Achieve Quantity over Quality</h2>
+			<p>I read an article, <a href="http://www.fastcompany.com/3015027/leadership-now/want-to-conquer-a-new-skill-do-it-every-day">Want To Conquer A New Skill? Do It Every Day</a>. The essence of the article submits that to learn a new skill, a beginner should focus on quantity over quality. Practice often and you will learn to refine your skill as you go. Do it everyday, and build on your knowledge. That approach worked really well for me in this process.</p>
+		</div><!--double-->
 
-			<br>Coding and programming, in my opinion, requires a nonlinear learning proccess. You have to throw yourself into a sea of suicidal confusion, stick it out, and wait for the moment when things start to click. I spent several days consuming information, hoping it would make sense later. Luckily, most of it has made sense. But you have to let go, let yourself be confused for as long as it takes. and just keep working at it.</p>
-	</div>
-	</div><!--main-->
+		<div class="column">
+			<img src="../images/dinocomic.png" height="100%" width="100%">
+		</div><!--double-->
+		
+
+</div><!--single-->
+
+	<div class="single-wrap">
+		<h2>Nonlinear Learning</h2>
+		<p>With learning a new skill, you end up diving into a pretty deep sea of confusion. The goal is to tred water until the moment when things click. I spent several days consuming information, hoping it would make more sense later when applied in context.
+		<br>
+		<br>
+		<p>My best advice to fellow beginners is to learn to be comfortable with confusion, and just keep working at it. The more attempts you make, even if they are failed attempts, the closer you will get to success.</p>
+	</div><!--single-->
+
+		</div><!--main-->
 </div><!--.container-->
-</div><!-- .welcome -->
