@@ -1,29 +1,79 @@
+@charset "utf-8";
 @import"sass/variables";
 $visual-grid: true;
-@import "neat/neat";
-@import "neat/neat-helpers";
+$visual-grid-index: front;
+$visual-grid-color: red;
+@import "stylesheets/neat/neat";
+@import "stylesheets/neat/neat-helpers";
+
+//Typography
 
 
-@include media($mobile){
+h2{
+  @include media($tablet){font-size:em(30);}
+  @include media($mobile){font-size:em(27); margin:2% 0;}
 
-body{
-	font-size:em(14);}
+}
 
-nav{
-  text-align:center;
-    ul{
-      @include span-columns(4 of 4);
-        list-style:none;
-          li{
-            @include inline-block;
-            @include pad(0 default 0 default);
-              a{
-                font-size:em(16);
-                text-transform: uppercase;}}}
+p{
+  @include media($tablet){font-size:em(18);}
+  @include media($mobile){font-size:em(16);}
+}
+
+
+
+.single{
+  @include media($tablet){@include span-columns(4);}
+}
+
+.column{
+  @include media($tablet){@include span-columns (4);}
+}
+
+figure{
+    img{
+      @include media($mobile){
+        max-width:em(300);
+        height:auto;}
+      @include media($tablet){
+        max-width:em(350);
+        height:auto;
+        display:block;
+        margin:0 auto;
+        float:left;}}
+    figcaption{
+      @include media($tablet){
+        @include span-columns(4);
+          text-align:left;}}
+}
+
+figure.feature{
+      img{
+        @include media($tablet){
+          max-height:em(300);
+          width:auto;
+          float:none;}}
+}
+
+section{
+  @include media($tablet){@include pad(4%);}
+  aside {
+    @include media($tablet){@include span-columns(4);}
+  article{
+    @include media($tablet){@include span-columns(4);}
+      @include span-columns(9);
+      @include pad(default);
+      border-top:1px solid $neutral-light;}}
 }
 
 footer{
-	@include span-columns(4 of 4);
-	background-color:green;
-}
+  @include media($mobile){
+    @include span-columns(4 of 4);}
+    .col{
+      @include media($mobile){
+        @include span-columns (4 of 4);
+        @include pad(default 3%);
+        border-bottom:1px solid #fff;
+        min-height:em(150);}
+      @include span-columns(4);}
 }

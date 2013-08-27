@@ -1,0 +1,21 @@
+---
+layout: "main-layout"
+---
+ <%= stylesheet_link_tag "css/normalize", "sass/all", "sass/mobile" %>
+ <%= javascript_include_tag  "scripts/all" %>
+
+
+<html>
+<head>
+<title>My First Middleman</title>
+</head>
+
+<body>
+
+<% wrap_layout :layout do %>
+<div class="container">
+<%=yield %>
+</div><!--container-->
+<% end %>
+
+</html>

@@ -47,9 +47,9 @@ activate :livereload
 #   end
 # end
 
-set :css_dir, 'stylesheets'
+set :css_dir, 'stylesheets/sass'
 
-set :js_dir, 'javascripts'
+set :js_dir, 'scripts/javascripts'
 
 set :images_dir, 'images'
 

@@ -1,20 +1,19 @@
 //Variables
 
 //breakpoints
-$mobile: new-breakpoint(max-width 500px 4);
 $tablet: new-breakpoint(max-width 800px 4);
-$desktop: new-breakpoint(min-width 800px 12);
+$mobile: new-breakpoint(max-width 500px 4);
 
 //colors
 $primary-a:#505655;
 $primary-b:#626a68;
-$primary-c:#737c7a;
+$primary-c:#888e8d;
 
-$secondary-a:#FF6400;
-$secondary-b:#C6692C;
+$secondary-a:#df5002;
+$secondary-b:#c84f00;
 $secondary-c:#AF4500;
-$secondary-d:#FFB280;
+$secondary-d:#f28061;
 
-$neutral-light:#ececf0;
+$neutral-light:#f9f9f3;
 $black:#000;
-$background:#fff;
+$bckgd:#fff;
