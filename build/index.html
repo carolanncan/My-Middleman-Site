@@ -2,25 +2,82 @@
 <html>
   <head>
     <meta charset="utf-8">
-    
-    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+
+<link href='http://fonts.googleapis.com/css?family=Holtwood+One+SC|Merriweather:400,900italic,900,400italic|Merriweather+Sans' rel='stylesheet' type='text/css'>
+
+<!-- Always force latest IE rendering engine or request Chrome Frame -->
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title>Welcome to Middleman</title>
+    <title>Home</title>
     
-    <link href="stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
-<link href="stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
-    <script src="javascripts/all.js" type="text/javascript"></script>
+     <link href="stylesheets/sass/css/normalize.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="stylesheets/sass/all.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="scripts/javascripts/scripts/all.js" type="text/javascript"></script>
   </head>
   
   <body class="index">
-    <div class="welcome">
-  <h1>Middleman is Watching</h1>
-  <dp class="button"><a href="http://www.google.com">Link to google</a></p>
-  <p class="doc">
-    <a href="http://middlemanapp.com/">Read Online Documentation</a>
-  </p><!-- .doc -->
-</div><!-- .welcome -->
-  </body>
+    <div class="container">
+      <header><h1>My First Robot</h1> </header>
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/process.html">The Process</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>  
+    </div><!--container-->
+
+      		<figure class="feature">
+			<img class="feature" src="../images/robot.svg" height="300" width="300" alt="Robot says Hey Thoughtbot!">
+			<figcaption>Hey, Thoughtbot!</figcaption>
+		</figure>
+
+<div class="container">
+	<div class="single">
+		<div class="column">
+		<h2>Beginners Should Achieve Quantity over Quality</h2>
+			<p>I recently read an awesome article, <a href="http://www.fastcompany.com/3015027/leadership-now/want-to-conquer-a-new-skill-do-it-every-day">Want To Conquer A New Skill? Do It Every Day</a>. The takeaway: focus on quantity first, and quality will inevitably follow. Practice often and you will learn to refine your skill as you go. Do it everyday, and build on your knowledge. That approach worked really well for me in this process.</p>
+		</div><!--double-->
+
+		<div class="column">
+			<figure>
+				<img src="../images/dinocomic.png" height="400" width="400">
+				<!-- <figcaption>What do you say Utahraptor?</figcaption> -->
+			</figure>
+		</div><!--column-->
+		
+
+</div><!--single-->
+
+	<div class="single">
+		<h2>Nonlinear Learning</h2>
+		<p>With learning a new skill, you end up diving into a pretty deep sea of confusion. The goal is to tread water and keep making progress until the moment when things click. I spent several days consuming information piece by piece, hoping it would make more sense later when applied in context (luckily, it did).
+		<br>
+		<br>
+		<p>My best advice to fellow beginners is to learn to be comfortable with confusion, and just keep working at it. The more attempts you make, even if they are failed attempts, the closer you will get to success.</p>
+	</div><!--single-->
+
+		</div><!--main-->
+</div><!--.container-->
+
+   <footer>
+    <div class="col">
+      <h2>Follow</h2>
+        <a href="contact.html" class="email sprite-socialmedia">Email</a>
+        <a href="http://github.com/carolanncan" class="github sprite-socialmedia" >Github</a>
+        <a href="http://twitter.com/carolanncan" class="twitter sprite-socialmedia">Twitter</a>
+        <a href="http://dribbble.com/carolanncan" class="dribbble sprite-socialmedia">Dribbble</a>
+    </div><!--1-->
+    <div class="col">
+      <h2>Ingredients</h2>
+      <p>HTML5 • SASS • Bourbon/Neat • Middleman</p>
+    </div><!--2-->  
+    <div class="col"> 
+     <h2>About</h2>
+      <p>I built this site to teach myself a new front-end framework.</p>
+    </div><!--2-->
+</footer> 
+
+</body>
 </html>

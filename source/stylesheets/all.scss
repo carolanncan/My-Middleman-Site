@@ -1,0 +1,327 @@
+@charset "utf-8";
+@import "bourbon/bourbon";
+
+$visual-grid: true;
+$visual-grid-index: front;
+$visual-grid-color: red;
+
+//breakpoints
+$tablet: new-breakpoint(max-width 800px 4);
+$mobile: new-breakpoint(max-width 500px 4);
+
+//colors
+$primary-a:#505655;
+$primary-b:#626a68;
+$primary-c:#888e8d;
+
+$secondary-a:#df5002;
+$secondary-b:#c84f00;
+$secondary-c:#AF4500;
+$secondary-d:#f28061;
+
+$neutral-light:#f9f9f3;
+$black:#000;
+$bckgd:#fff;
+@import "neat/neat";
+@import "neat/neat-helpers";
+@import "sass/mobile";
+
+
+
+html{font-family:('Merriweather', serif); margin:0;padding:0;}
+body {font-size:em(16);font-weight:400;text-align: left;margin:0;padding:0;background-color:$bckgd;}
+
+//Typography
+
+::selection{background:$secondary-d; color:$black;}
+::-moz-selection{background:$black;}
+
+h1{
+  color:$primary-a;
+  font-family:'Holtwood One SC', serif;
+  font-variant:italic;
+  font-size:em(40);
+  line-height: 120%;
+  text-align:center;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+  text-transform: uppercase;
+  margin:0;
+}
+
+h2{
+  @include media($tablet){font-size:em(30);}
+  @include media($mobile){font-size:em(27); margin:2% 0;}
+  color:$secondary-b;
+  font-size:em(35);
+  font-weight:400;
+  font-style:italic;
+  line-height: 120%; 
+  margin:0 0 2% 0;
+}
+
+h3{
+  color:$primary-c;
+  font-size:em(25);
+  font-weight:400;
+  line-height: 200%; 
+  margin:0;
+    &:before, &:after{
+      content:"–";
+      color: $secondary-b;
+      margin: 0 1%;}
+}
+
+h4{
+  color:$secondary-b;
+  font-style:italic;
+  font-weight:700;
+  font-size:em(30);
+  margin:0;
+}
+
+p{
+  @include media($tablet){font-size:em(18);}
+  @include media($mobile){font-size:em(16);}
+  color:$black;
+  font-size:em(20);
+  line-height: 160%;
+  margin:0;
+}
+
+a{
+  color:$secondary-b;
+  text-decoration: none;
+    &:hover {color: $primary-b;}
+}
+
+code{
+  background-color:$neutral-light;
+  font-family:$monospace;
+  font-size:em(13);
+}
+
+a.symbol:before {
+    content: attr(title);
+    margin-right: 0.3em;
+    font-size: 130%;
+}
+
+//Structure
+.container{
+  @include outer-container;
+}
+
+.single{
+  @include span-columns(12);
+  @include pad(3%);
+    @include media($tablet){@include span-columns(4);}
+  border-top:1px solid $neutral-light;
+    &:nth-of-type(1){border:none;}
+}
+
+.column{
+  @include media($tablet){@include span-columns (4);}
+  @include span-columns(6);
+  margin-bottom:4%;
+
+}
+
+header{
+  @include span-columns(12);
+  @include pad(0 default);}
+
+nav{
+  text-align:center;
+    ul{
+      @include span-columns(12);
+      @include pad(0 default);
+        list-style:none;
+          li{
+            @include inline-block;
+            @include pad(0 2%);
+              a{
+                font-size:em(19);
+                font-weight:900;
+                font-style:italic;}}}
+}
+
+figure{
+  @include fill-parent;
+  margin:0;
+    img{
+      display:block;
+      margin:0 auto 5% auto;
+      @include media($mobile){
+        max-width:em(300);
+        height:auto;}
+      @include media($tablet){
+        max-width:em(350);
+        height:auto;
+        display:block;
+        margin:0 auto;
+        float:left;}}
+    figcaption{
+      @include pad(default);
+      font-style:italic;  
+      text-align: center;
+      color:$primary-c;
+        @include media($tablet){
+          @include span-columns(4);
+          text-align:left;}}
+}
+
+figure.feature{
+  @include span-columns(12);
+  background-image: url('../images/geometry.png');
+      img{
+        display:block;
+        margin:5% auto 0 auto;
+        @include media($tablet){
+          max-height:em(300);
+          width:auto;
+          float:none;}}
+  figcaption{
+    @include pad(2% 0 0 3%);
+    font-size:em(20);
+    font-style:italic;
+    margin-bottom: 3%;
+    text-align: center;
+    color:$primary-a;}
+}
+
+section{
+  @include media($tablet){@include pad(4%);}
+  aside {
+    @include media($tablet){@include span-columns(4);}
+    @include span-columns(3);
+    @include pad(default);
+    border-top:1px solid $neutral-light;
+      img{
+        margin:8% 0;
+        float:left;}}}
+    article{
+      @include media($tablet){
+        @include span-columns(4);}
+      @include span-columns(9);
+      @include pad(default);
+      border-top:1px solid $neutral-light;
+        ul{
+          @include pad(15px 30px);
+          list-style:disc;
+          text-align: left;
+          margin-top:0;
+          color:$secondary-b;
+            li a{
+              color:$secondary-b;
+              line-height: 150%;}}
+        .list-title{
+          color:$primary-b;
+          font-weight: 700;
+          padding-bottom: 8px;
+          border-bottom:1px solid #fff;}        
+}
+
+footer{
+  @include media($mobile){
+    @include span-columns(4 of 4);}
+  @include span-columns(12);
+  @include pad(default);
+  background-color:$neutral-light;
+  margin-top:3%;
+    .col{
+      @include media($mobile){
+        @include span-columns (4 of 4);
+        @include pad(default 3%);
+        border-bottom:1px solid #fff;
+        min-height:em(150);}
+      @include span-columns(4);}
+    h2{
+      font-size:em(18);
+      margin-bottom: 3%;}
+    p{
+      font-family:'Merriweather Sans', sans-serif;
+      font-size:em(17);
+      color:$primary-c;}
+}
+
+//Sprites
+.sprite-socialmedia{
+  background-image:url(../images/socialmedia.png);
+  display:inline-block;
+  margin:0 2% 2% 0; 
+  text-indent:-9999px;
+  height:44px;
+  width:44px;
+}
+.email{
+  background-position:0 -44px;
+    &:hover{background-position:0 0;}
+}
+.github{
+  background-position:132px -44px;;
+    &:hover{background-position:132px 0;}
+}
+.twitter{
+  background-position:-88px -44px;
+    &:hover{background-position:88px 0;}
+}
+.dribbble{
+  background-position:-132px -44px;
+    &:hover{background-position:44px 0;}
+}
+
+//Graphic Elements
+
+.gray-box{
+  @include pad(default default 0 default );
+  border-radius: 5px;  
+  background: $neutral-light;
+  font-family:'Merriweather Sans', sans-serif;
+  margin-top:2%;
+}
+
+.tooltip{
+  display:inline;
+  position:relative;
+    &:hover:after{
+      background: $black;
+      background: rgba(0,0,0,.9);
+      border-radius: 5px;
+      bottom: -50px;
+      color: $secondary-d;
+      content: attr(title);
+      font-size:em(13);
+      left: 20%;
+      line-height: 120%;
+      @include pad(10px);
+      position: absolute;
+      z-index: 98;
+      width: 220px;
+    }
+}
+
+//Form
+
+form{
+  input[type="text"],input[type="email"],input[type="tel"],input[type="url"],
+    textarea, input {
+      @include fill-parent;
+      @include box-shadow(inset 0 0 3px 1px rgba(0, 0, 0, 0.04));
+      @include pad(15px);
+      background:#FFF;
+      border:1px solid $neutral-light;
+      border-radius:5px;
+      color:$primary-c;
+      margin:0 0 10px;
+        &:focus{
+          border:1px solid $black;
+          outline:none;}}
+    label{
+      color:$primary-b;
+      font-size:em(18);
+      line-height: 170%;
+    }
+
+    button{
+      @include button (simple, $secondary-b);}  
+}
